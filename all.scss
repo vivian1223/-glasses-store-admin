@@ -1,0 +1,12 @@
+$font-title: "sm","md","lg";
+$font-size:(
+    "sm":20px,
+    "md":30px,
+    "lg":40px
+);
+
+@each $size in $font-title {
+    .font-#{$size} {
+        font-size: map-get($font-size,$size);
+    }
+}
