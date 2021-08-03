@@ -1,0 +1,27 @@
+//file button
+
+.btn{
+    font-weight: 700;
+    padding: $spacer *2.5;
+    border-radius: 4px;
+    display: inline-block;
+}
+.btn-file{
+    background-color: $light;
+    color: $dark;
+    border: 1px $info solid;
+    &:hover{
+        background-color: darken($light, 10%);
+    }
+}
+
+@each $color in $color-list {
+    .btn-#{$color}{
+        color: map-get($color-map,$color);
+        border: 1px map-get($color-map,$color) solid;
+        &:hover{
+            background-color:map-get($color-map,$color);
+            color: $white;
+        }
+    }
+}

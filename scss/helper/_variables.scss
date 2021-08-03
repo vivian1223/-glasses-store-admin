@@ -71,9 +71,40 @@ $danger:#DC3545;
 $info:#6C757D;
 $light:#F8F9FA;
 $dark:#212529;
+$white:#fff;
+
+//font,border color
+$color-list: "primary","secondary","danger","info", "light", "dark";
+$color-map:(
+    "primary":$primary,
+    "secondary":$secondary,
+    "danger":$danger,
+    "info":$info,
+    "light":$light,
+    "dark":$dark
+);
+//border direction
+$direction-list:"top","right","bottom","left";
+$direciton-map:(
+    "top":top,
+    "right":right,
+    "bottom":bottom,
+    "left":left
+);
 
 //gird 
 
 $grid-spacer:106px;
 $grid-name:1,2,3,4,5,6,7,8,9,10,11,12;
 
+//flex
+
+$flex-list:"center","start","end","around","between","evenly";
+$flex-map:(
+    "center":center,
+    "start":flex-start,
+    "end":flex-end,
+    "around":space-around,
+    "between":space-between,
+    "evenly":space-evenly
+);

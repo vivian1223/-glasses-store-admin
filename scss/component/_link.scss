@@ -1,8 +1,18 @@
+//only with normal hover effect
 .link-primary{
+    color: $dark;
+}
+.link-primary:hover{
+    color: $primary;
+}
+
+//link with the decoration on left
+
+.link-primary-left{
     border-left: 4px solid transparent;
 }
 
-.link-primary:hover{
+.link-primary-left:hover{
 border-left: 4px $primary solid;
 color: $primary;
 }

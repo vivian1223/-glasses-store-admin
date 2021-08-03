@@ -23,17 +23,17 @@
                     src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/logo-ANSWER.svg"
                     alt="logo">
                 <ul>
-                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary" href="#"><i
+                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
                                 class="fas fa-columns me-1"></i>Dashboard</a></li>
-                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary" href="#"><i
+                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
                                 class="fas fa-question-circle  me-1"></i>Question</a></li>
-                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary" href="#"><i
+                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
                                 class="fas fa-thumbtack me-1"></i>Assignment</a></li>
-                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary" href="#"><i
+                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
                                 class="fab fa-youtube me-1 "></i>Course</a></li>
-                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary" href="#"><i
+                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
                                 class="fas fa-user-friends  me-1 "></i></i>Admin</a></li>
-                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary" href="#"><i
+                    <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
                                 class="fas fa-cog  me-1 "></i>Settings</a></li>
                 </ul>
             </div>
@@ -42,15 +42,171 @@
                     src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/andychen.jpeg"
                     alt="Andy Chen Picture">
                 <ul class="ms-1">
-                    <li>Andy Chen</li>
+                    <li class="font-bold">Andy Chen</li>
                     <li class="font-info fs-2">andy0401@mail.com</li>
                 </ul>
             </div>
 
         </div>
-        <div class="col-9">
+        <div class="col-9 p-5 ">
+            <div class="d-flex mb-4 align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <p class="font-bold fs-5 lh-1">Assignment</p>
+                    <a class="d-block link-primary ms-2 font-bold" href="#">All Courses
+                        <i class="ms-1 fas fa-chevron-down"></i>
+                    </a>
+                </div>
+                <div class="d-flex">
+                    <a class="link-primary ms-3" href="#"><i class="fas fa-search"></i></a>
+                    <a class="link-primary ms-3" href="#"><i class="fas fa-bell"></i></a>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex justify-content-between">
+                    <a class="link-primary" href="#">All (4)<i class="ms-1 fas fa-chevron-down"></i></a>
+                    <span class="font-info fs-1 align-self-end">2 comments</span>
+                </div>
+                <div class="d-flex  mt-1">
+                    <div class="col-4">
+
+                        <ul class="border-radius-round border-secondary lh-1">
+                            <li>
+                                <a class="d-block p-1  bg-light  border-bottom-secondary border-top-right-radius-round border-top-left-radius-round"
+                                    href="#">
+                                    <div class="d-flex justify-content-between fs-1 font-dark">
+                                        <p>Chapter Assignment 2</p>
+                                        <p>4 hrs ago</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between  align-items-center">
+                                        <p class="font-dark font-bold">Please check this file…</p>
+                                        <p class="fs-1 font-info">Emily Wang</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class=" d-block p-1 border-bottom-secondary" href="#">
+                                    <div class="d-flex justify-content-between fs-1 font-dark">
+                                        <p>Chapter Assignment 1</p>
+                                        <p>12 hrs ago</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between  align-items-center">
+                                        <p class="font-dark font-bold">My Homework</p>
+                                        <p class="fs-1 font-info">David Xu</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class=" d-block p-1 border-bottom-secondary" href="#">
+                                    <div class="d-flex justify-content-between fs-1 font-dark">
+                                        <p>Final Assignment</p>
+                                        <p>18 hrs ago</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between  align-items-center">
+                                        <p class="font-dark font-bold">Have a problem with this…</p>
+                                        <p class="fs-1 font-info">Tony Wei</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class=" d-block p-1 " href="#">
+                                    <div class="d-flex justify-content-between fs-1 font-dark">
+                                        <p>Final Assignment</p>
+                                        <p>19 hrs ago</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between  align-items-center">
+                                        <p class="font-dark font-bold">Did I do it right?</p>
+                                        <p class="fs-1 font-info">Christina Lin</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-8 d-flex flex-column ms-1">
+                        <div class=" border-radius-round border-secondary">
+                            <div
+                                class="d-flex justify-content-between align-items-center p-1 bg-light border-top-right-radius-round border-top-left-radius-round">
+                                <div>
+                                    <p class="fs-1 font-info">Chapter Assignment 2 / HTML&CSS</p>
+                                    <p class="font-bold">Please check this file for me, thanks!</p>
+                                </div>
+                                <a class="d-block font-dark link-primary" href="#"><i class="fas fa-ellipsis-v"></i></a>
+                            </div>
+                            <div class="p-2">
+                                <!-- 學生問題 -->
+                                <div class="">
+                                    <div class="d-flex  ms-4 align-items-center">
+                                        <img class="w-4 h-4 object-fit-cover   border-radius-pill"
+                                            src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/emilywang.jpeg"
+                                            alt="Emily Wang Picture">
+                                        <div class="ms-1">
+                                            <p class="font-bold">Andy Chen</p>
+                                            <p class="font-info fs-2">13:24 AM (1 hours ago)</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-4 ms-5 pt-2 pb-2">
+                                        <p class="fs-2 ">
+                                            Hi Teacher, the attached file is my homework of c
+                                            hapter 2. And here comes a question: Why in the fol
+                                            lowing code the height of the <span class="font-code">div</span> is bigger
+                                            than the
+                                            height of the <span class="font-code">img</span> ? There is a gap below the
+                                            image,
+                                            t it doesn’t seems to be a padding/margin.<br> What is th
+                                            e gap or extra space below image?
+                                        </p>
+                                        <a class="btn btn-file mt-1" href="#"><i
+                                                class="fas fa-paperclip me-1"></i>HW-2-David.zip</a>
+                                    </div>
+
+
+                                </div>
+                                <hr class="col-4">
+                                <!-- 講師回覆 -->
+                                <div>
+                                    <div class="d-flex  ms-4 align-items-center">
+
+                                        <img class="h-4 w-4 object-fit-cover  border-radius-pill"
+                                            src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/andychen.jpeg"
+                                            alt="Andy Chen Picture">
+
+
+                                        <div class="ms-1">
+                                            <p class="font-bold">Andy Chen</p>
+                                            <p class="font-info fs-2">13:24 AM (1 hours ago)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 ms-5 pt-2 pb-2">
+                                        <p class="fs-2 text-left">
+                                            Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.
+                                             <br>  <br> 
+                                             You can: <br>  <br>
+                                             　• adjust the <span class="font-code">vertical-align</span> of the image to position it elsewhere (e.g. the <span class="font-code">middle</span> ) or 
+                                            <br> 　• change the <span class="font-code">display</span> so it isn’t inline.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center p-2">
+                            <div class="d-flex">
+                                <a class="link-primary" href="#"><i class="fas fa-chevron-left"></i></a>
+                                <a class="link-primary ms-2"  href=""><i class="fas fa-chevron-right"></i></a>
+                            </div>
+                            <div class="d-flex">
+                                <a href="#" class="btn btn-primary">Mark as read</a>
+                                <a href="#" class="ms-1 btn btn-primary">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
+    </div>
     </div>
 
 </body>

@@ -3,7 +3,7 @@
     .fs-#{$name}{
         font-size: $spacer * map-get($font-base,$name) ;
     }
-}
+};
 
 //line-height
 
@@ -11,19 +11,28 @@
     .lh-#{$name}{
         line-height: map-get($line-height-base,$name);
     }
-}
+};
 
 //font-weight
 
 .font-bold{
     font-weight: 700;
-}
+};
 
 //font color
-.font-dark{
-    color: $dark;
+
+@each $color in $color-list {
+    .font-#{$color}{
+        color: map-get($color-map, $color);
+    }
+};
+
+//text-align
+
+@each $direction in $direction-list {
+    .text-#{$direction}{
+        text-align: map-get($direciton-map, $direction);
+    }
 }
 
-.font-info{
-    color: $info;
-}
+//font-famlily
