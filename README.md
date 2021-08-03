@@ -1,1 +1,1 @@
-# -glasses-store-admin
+# course-admin
