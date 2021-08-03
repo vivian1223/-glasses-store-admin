@@ -1,0 +1,6 @@
+@each $name in $grid-name {
+    .col-#{$name}{
+        width: $grid-spacer * $name;
+    }
+    
+}

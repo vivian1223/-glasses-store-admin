@@ -1,0 +1,8 @@
+.link-primary{
+    border-left: 4px solid transparent;
+}
+
+.link-primary:hover{
+border-left: 4px $primary solid;
+color: $primary;
+}

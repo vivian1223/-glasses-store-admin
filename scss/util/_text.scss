@@ -1,0 +1,29 @@
+//font-size
+@each $name in $font-name {
+    .fs-#{$name}{
+        font-size: $spacer * map-get($font-base,$name) ;
+    }
+}
+
+//line-height
+
+@each $name in $line-height-name{
+    .lh-#{$name}{
+        line-height: map-get($line-height-base,$name);
+    }
+}
+
+//font-weight
+
+.font-bold{
+    font-weight: 700;
+}
+
+//font color
+.font-dark{
+    color: $dark;
+}
+
+.font-info{
+    color: $info;
+}

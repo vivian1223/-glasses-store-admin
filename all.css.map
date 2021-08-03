@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAQI,AAAA,QAAQ,CAAO;EACX,SAAS,EAPR,IAAI;CAQR;;AAFD,AAAA,QAAQ,CAAO;EACX,SAAS,EANR,IAAI;CAOR;;AAFD,AAAA,QAAQ,CAAO;EACX,SAAS,EALR,IAAI;CAMR",
-    "sources": [
-        "all.scss"
-    ],
-    "names": [],
-    "file": "all.css"
-}
