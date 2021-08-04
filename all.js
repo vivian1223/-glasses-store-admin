@@ -3,6 +3,8 @@ const app = Vue.createApp({
         return {
             assignment:true,
             admin:false,
+            editor:false,
+            reply:true,
             adminInfo:[
                 {
                 id:1,
@@ -76,6 +78,10 @@ const app = Vue.createApp({
             this.assignment = false;
             this.admin = true;
            
+        },
+        toggleEditor(){
+            this.editor = !this.editor;
+            this.reply = !this.reply;
         }
     },
 });

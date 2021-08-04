@@ -28,11 +28,13 @@
                                 class="fas fa-columns me-1"></i>Dashboard</a></li>
                     <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
                                 class="fas fa-question-circle  me-1"></i>Question</a></li>
-                    <li><a @click.prevent="showAssignment" class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
+                    <li><a @click.prevent="showAssignment"
+                            class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
                                 class="fas fa-thumbtack me-1"></i>Assignment</a></li>
                     <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
                                 class="fab fa-youtube me-1 "></i>Course</a></li>
-                    <li><a @click.prevent="showAdmin" class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
+                    <li><a @click.prevent="showAdmin"
+                            class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
                                 class="fas fa-user-friends  me-1 "></i></i>Admin</a></li>
                     <li><a class="d-block font-bold font-dark pt-1 pb-1 ps-5 link-primary-left" href="#"><i
                                 class="fas fa-cog  me-1 "></i>Settings</a></li>
@@ -49,10 +51,10 @@
             </div>
 
         </div>
-         <!-- 左側導覽列結束 -->
-        
+        <!-- 左側導覽列結束 -->
+
         <div class="col-9 p-5 ">
-             <!-- assignment 頁面開始 -->
+            <!-- assignment 頁面開始 -->
             <div id="assignment" v-if="assignment">
                 <div class="d-flex mb-4 align-items-center justify-content-between">
                     <div class="d-flex align-items-center">
@@ -73,7 +75,7 @@
                     </div>
                     <div class="d-flex  mt-1">
                         <div class="col-4">
-    
+
                             <ul class="border-radius-round border-secondary lh-1">
                                 <li>
                                     <a class="d-block p-1  bg-light  border-bottom-secondary border-top-right-radius-round border-top-left-radius-round"
@@ -124,7 +126,7 @@
                                         </div>
                                     </a>
                                 </li>
-    
+
                             </ul>
                         </div>
                         <div class="col-8 d-flex flex-column ms-1">
@@ -135,7 +137,8 @@
                                         <p class="fs-1 font-info">Chapter Assignment 2 / HTML&CSS</p>
                                         <p class="font-bold">Please check this file for me, thanks!</p>
                                     </div>
-                                    <a class="d-block font-dark link-primary" href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                    <a class="d-block font-dark link-primary" href="#"><i
+                                            class="fas fa-ellipsis-v"></i></a>
                                 </div>
                                 <div class="p-2">
                                     <!-- 學生問題 -->
@@ -148,15 +151,17 @@
                                                 <p class="font-bold">Andy Chen</p>
                                                 <p class="font-info fs-2">13:24 AM (1 hours ago)</p>
                                             </div>
-    
+
                                         </div>
                                         <div class="col-4 ms-5 pt-2 pb-2">
                                             <p class="fs-2 ">
                                                 Hi Teacher, the attached file is my homework of c
                                                 hapter 2. And here comes a question: Why in the fol
-                                                lowing code the height of the <span class="font-code">div</span> is bigger
+                                                lowing code the height of the <span class="font-code">div</span> is
+                                                bigger
                                                 than the
-                                                height of the <span class="font-code">img</span> ? There is a gap below the
+                                                height of the <span class="font-code">img</span> ? There is a gap below
+                                                the
                                                 image,
                                                 t it doesn’t seems to be a padding/margin.<br> What is th
                                                 e gap or extra space below image?
@@ -164,121 +169,162 @@
                                             <a class="btn btn-file mt-1" href="#"><i
                                                     class="fas fa-paperclip me-1"></i>HW-2-David.zip</a>
                                         </div>
-    
-    
+
+
                                     </div>
-                                    <hr class="col-4">
-                                    <!-- 講師回覆 -->
-                                    <div>
-                                        <div class="d-flex  ms-4 align-items-center">
-    
-                                            <img class="h-4 w-4 object-fit-cover  border-radius-pill"
-                                                src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/andychen.jpeg"
-                                                alt="Andy Chen Picture">
-    
-    
-                                            <div class="ms-1">
-                                                <p class="font-bold">Andy Chen</p>
-                                                <p class="font-info fs-2">13:24 AM (1 hours ago)</p>
+                                    <hr class="col-4 mt-1 mb-1">
+                                    <!-- 講師回覆開始 -->
+                                    <div v-if="reply">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex  ms-4 align-items-center">
+
+                                                <img class="h-4 w-4 object-fit-cover  border-radius-pill"
+                                                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/andychen.jpeg"
+                                                    alt="Andy Chen Picture">
+
+
+                                                <div class="ms-1">
+                                                    <p class="font-bold">Andy Chen</p>
+                                                    <p class="font-info fs-2">13:24 AM (1 hours ago)</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <a href="" class="link-primary me-3"><i class="far fa-star"></i></a>
+                                                <a href="" class="link-primary me-3"><i class="fas fa-pen"></i></a>
                                             </div>
                                         </div>
                                         <div class="col-4 ms-5 pt-2 pb-2">
                                             <p class="fs-2 text-left">
-                                                Hi David, by default, an image is rendered inline, like a letter so it sits
-                                                on the same line that a, b, c and d sit on. There is space below that line
+                                                Hi David, by default, an image is rendered inline, like a letter so it
+                                                sits
+                                                on the same line that a, b, c and d sit on. There is space below that
+                                                line
                                                 for the descenders you find on letters like g, j, p and q.
                                                 <br> <br>
                                                 You can: <br> <br>
-                                                　• adjust the <span class="font-code">vertical-align</span> of the image to
-                                                position it elsewhere (e.g. the <span class="font-code">middle</span> ) or
+                                                　• adjust the <span class="font-code">vertical-align</span> of the image
+                                                to
+                                                position it elsewhere (e.g. the <span class="font-code">middle</span> )
+                                                or
                                                 <br> 　• change the <span class="font-code">display</span> so it isn’t
                                                 inline.
                                             </p>
-    
+
                                         </div>
                                     </div>
+
+
                                 </div>
-    
+                                <!-- 講師回覆結束-->
+                                <!-- 修改回覆開始 -->
+                                <div v-if="editor"
+                                    class="border-top-secondary border-radius-round">
+                                    <div
+                                        class=" border-bottom-secondary  d-flex bg-light justify-content-start border-top-right-radius-round border-top-left-radius-round pt-2 pb-2 ps-4">
+                                        <a href="#" class="link-primary font-bold  me-3">Body Text <i
+                                                class="fas fa-caret-down"></i></a>
+                                        <a href="" class="link-primary me-3"><i class="fas fa-bold"></i></a>
+                                        <a href="" class="link-primary me-3"><i class="fas fa-italic"></i></a>
+                                        <a href="" class="link-primary me-3"><i class="fas fa-list-ul"></i></a>
+                                        <a href="" class="link-primary me-3"><i class="fas fa-list-ol"></i></a>
+                                        <a href="" class="link-primary me-3"><i class="fas fa-image"></i></a>
+                                        <a href="" class="link-primary me-3"><i class="fas fa-file-archive"></i></a>
+                                        <a href="" class="link-primary me-3"><i class="fas fa-code"></i></a>
+                                    </div>
+                                    <div class="pt-2 pb-2 ps-3 pe-3 ">
+                                        <textarea class="textarea-relpy" placeholder="Reply an answer…"></textarea>
+                                        <div class="d-flex justify-content-end ms-1">
+                                        <a href="#" class="btn btn-primary" @click.prevent="toggleEditor">Cancel</a>
+                                        <a href="#" class="btn btn-primary ms-1" @click.prevent="toggleEditor">Reply</a>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                                <!-- 修改回覆結束 -->
                             </div>
-                            <div class="d-flex justify-content-between align-items-center p-2">
+
+
+                            <div v-if="reply" class="d-flex justify-content-between align-items-center p-2">
                                 <div class="d-flex">
                                     <a class="link-primary" href="#"><i class="fas fa-chevron-left"></i></a>
                                     <a class="link-primary ms-2" href=""><i class="fas fa-chevron-right"></i></a>
                                 </div>
                                 <div class="d-flex">
                                     <a href="#" class="btn btn-primary">Mark as read</a>
-                                    <a href="#" class="ms-1 btn btn-primary">Reply</a>
+                                    <a href="#" class="ms-1 btn btn-primary" @click.prevent="toggleEditor">Reply</a>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
-    
             </div>
-            <!-- assignment 頁面結束 -->
-
             <!-- admin 頁面開始 -->
-            <div id="admin" v-if="admin">
+        <div id="admin" v-if="admin">
 
-                <div class="d-flex mb-4 align-items-center justify-content-between">
-                    <div class="d-flex align-items-center">
-                        <p class="font-bold fs-5 lh-1">Assignment</p>
-                        <a class="d-block link-primary ms-4 font-bold" href="#">
-                            <i class="fas fa-plus font-primary"></i>
-                            Add New Admin
-                        </a>
-                    </div>
-                    <div class="d-flex">
-                        <a class="link-primary ms-3" href="#"><i class="fas fa-search"></i></a>
-                        <a class="link-primary ms-3" href="#"><i class="fas fa-bell"></i></a>
-                    </div>
+            <div class="d-flex mb-4 align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <p class="font-bold fs-5 lh-1">Assignment</p>
+                    <a class="d-block link-primary ms-4 font-bold" href="#">
+                        <i class="fas fa-plus font-primary"></i>
+                        Add New Admin
+                    </a>
                 </div>
-                <!-- admin 表格開始 -->
-                <table>
-                    <thead>
-                        <tr class="font-bold border-bottom-dark">
-                            <td class="col-1">ID</td>
-                            <td class="col-2">Name</td>
-                            <td class="col-3">Email</td>
-                            <td class="col-1">Verified</td>
-                            <td class="col-2"></td>
-                        </tr>
-                    </thead>
-                    <template v-for="member in adminInfo">
-                        <tr class="border-bottom-secondary">
-                            <td class="pt-2 pb-2">#{{member.id}}</td>
-                            <td class="pt-2 pb-2">{{member.name}}</td>
-                            <td class="pt-2 pb-2">{{member.email}}</td>
-                            <td class="pt-2 pb-2">{{member.verified ? "Yes": "No"}}</td>
-                            <td class="d-flex pt-2 pb-2">
-                                <a  class="link-primary" href="#"><i class="fas fa-eye"></i></a>
-                                <a  class="link-primary ms-2" href="#"><i class="fas fa-pen"></i></a>
-                            </td>
-                        </tr>
-                    </template>
-                </table>
-                <!-- pagination開始 -->
-                <div class="d-flex mt-5  justify-content-end">
-                    <ul class="pagination">
-                        <li><a class="page-item" href="#"><i class="fas fa-chevron-left"></i></a></li>
-                        <li><a class="page-item"  href="#">1</a></li>
-                        <li><a class="page-item" href="#">2</a></li>
-                        <li><a class="page-item"  href="#">3</a></li>
-                        <li><a class="page-item"  href="#"><i class="fas fa-chevron-right"></i></a></li>
-                    </ul>
+                <div class="d-flex">
+                    <a class="link-primary ms-3" href="#"><i class="fas fa-search"></i></a>
+                    <a class="link-primary ms-3" href="#"><i class="fas fa-bell"></i></a>
                 </div>
-                <!-- paginatoin結束 -->
-                <!-- admin 表格結束 -->
-
             </div>
-            <!-- admin 頁面結束 -->
+            <!-- admin 表格開始 -->
+            <table>
+                <thead>
+                    <tr class="font-bold border-bottom-dark">
+                        <td class="col-1">ID</td>
+                        <td class="col-2">Name</td>
+                        <td class="col-3">Email</td>
+                        <td class="col-1">Verified</td>
+                        <td class="col-2"></td>
+                    </tr>
+                </thead>
+                <template v-for="member in adminInfo">
+                    <tr class="border-bottom-secondary">
+                        <td class="pt-2 pb-2">#{{member.id}}</td>
+                        <td class="pt-2 pb-2">{{member.name}}</td>
+                        <td class="pt-2 pb-2">{{member.email}}</td>
+                        <td class="pt-2 pb-2">{{member.verified ? "Yes": "No"}}</td>
+                        <td class="d-flex pt-2 pb-2">
+                            <a class="link-primary" href="#"><i class="fas fa-eye"></i></a>
+                            <a class="link-primary ms-2" href="#"><i class="fas fa-pen"></i></a>
+                        </td>
+                    </tr>
+                </template>
+            </table>
+            <!-- pagination開始 -->
+            <div class="d-flex mt-5  justify-content-end">
+                <ul class="pagination">
+                    <li><a class="page-item" href="#"><i class="fas fa-chevron-left"></i></a></li>
+                    <li><a class="page-item" href="#">1</a></li>
+                    <li><a class="page-item" href="#">2</a></li>
+                    <li><a class="page-item" href="#">3</a></li>
+                    <li><a class="page-item" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+            <!-- paginatoin結束 -->
+            <!-- admin 表格結束 -->
+
         </div>
+        <!-- admin 頁面結束 -->
+        </div>
+        <!-- assignment 頁面結束 -->
+
         
+    </div>
+
 
     </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="all.js"></script>
-</body> 
+</body>
 
 </html>

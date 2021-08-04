@@ -13,6 +13,16 @@
         }
     }
 };
+//border none
+
+@each $direction in $direction-list {
+     .border-#{$direction}-none{
+         border-#{$direction}: none;
+    }
+};
+.border-none{
+    border: none;
+}
 
 //border radious
 .border-radius-round{

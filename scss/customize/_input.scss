@@ -1,0 +1,17 @@
+.textarea-relpy{
+    width: 100%;
+    height: 168px;
+    border:none;
+    resize: none;
+    font-family: 'Roboto Mono';
+    &::placeholder{
+        color: $secondary;
+    }
+    &:focus{
+        outline: none;
+    }
+
+    &:active{
+        outline: none;
+    }
+}
