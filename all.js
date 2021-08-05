@@ -5,6 +5,8 @@ const app = Vue.createApp({
             admin:false,
             editor:false,
             reply:true,
+            backgroundDarkenLayer:false,
+            adminModal:false,
             adminInfo:[
                 {
                 id:1,
@@ -82,6 +84,18 @@ const app = Vue.createApp({
         toggleEditor(){
             this.editor = !this.editor;
             this.reply = !this.reply;
+        },
+        togglePreview(){
+            this.backgroundDarkenLayer = !this.backgroundDarkenLayer;
+            const wholePage = document.querySelector('#app') 
+            const pageOverflow = wholePage.style.overflow;
+            if( pageOverflow === "hidden"){
+                pageOverflow === "visible"
+            }else{
+                pageOverflow === "hidden"
+            }
+            this.adminModal = !this.adminModal;
+
         }
     },
 });

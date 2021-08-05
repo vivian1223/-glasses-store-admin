@@ -1,0 +1,14 @@
+.modal{
+width: 480px;
+padding: 32px;
+display: flex;
+border: 1px solid $secondary;
+border-radius: 4px;
+background-color: $white;
+position: absolute;
+top: 50%;
+left: 35%;
+transform: translateX(-50%);
+transform: translateY(-50%);
+z-index: 4;
+}
