@@ -303,7 +303,7 @@
                                 <td class="d-flex pt-2 pb-2">
                                     <a @click.prevent="togglePreview" class="link-primary" href="#"><i
                                             class="fas fa-eye"></i></a>
-                                    <a class="link-primary ms-2" href="#"><i class="fas fa-pen"></i></a>
+                                    <a @click.prevent="toggleWindow" class="link-primary ms-2" href="#"><i class="fas fa-pen"></i></a>
                                 </td>
                             </tr>
                         </template>
@@ -333,7 +333,7 @@
 
         <!-- admin 畫面預覽彈跳視窗開始 -->
 
-        <div class="modal" v-if="adminModal">
+        <div class="modal-card" v-if="adminModal">
 
             <img class="w-14 h-14 object-fit-cover"
                 src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/emir.jpeg"
@@ -341,7 +341,7 @@
 
             <div class="col-2 ms-3">
                 <div class="d-flex justify-content-between">
-                    <span>#1</span>
+                    <span  class="font-bold">#1</span>
                     <a @click.prevent="togglePreview"  href="#" class="link-primary"><i class="fas fa-times"></i></a>
                 </div>
                 <p>Admin</p>
@@ -355,6 +355,33 @@
         </div>
 
     <!-- admin 畫面預覽彈跳視窗結束 -->
+    <!-- 編輯畫面彈跳視窗開始 -->
+    <div class="modal-card flex-column" v-if="windowModal">
+        <div class="d-flex align-items-center">
+            <img class="w-14 h-14 object-fit-cover"
+                src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/emir.jpeg"
+                alt="admin picture">
+
+            <div class="col-2 ms-3">
+                <div class="d-flex justify-content-between">
+                    <span class="font-bold">#1</span>
+                    <a @click.prevent="toggleWindow"  href="#" class="link-primary"><i class="fas fa-times"></i></a>
+                </div>
+                <p>Admin</p>
+                <p class="fs-3 font-bold">Emir Wicks</p>
+                <p class="fs-2 font-secondary mt-1 mb-2">emir.wicks@mail.com</p>
+                <div  class="d-flex justify-content-between">
+                    <span>Verified</span>
+                    <a @click.prevent="toggleWindow" href="#" class="link-primary"><i class="fas fa-chevron-down"></i></a>
+                </div>
+            </div>
+        </div>
+             <div class="col-4 d-flex justify-content-end mt-3 justify-content-end">
+                <a href="#" class="btn btn-danger">Deactivate</a>
+                <a href="#" class="ms-1 btn btn-primary">Edit</a>
+             </div>
+    </div>
+    <!-- 編輯畫面彈跳視窗結束 -->
     </div>
     </div>
     </div>
