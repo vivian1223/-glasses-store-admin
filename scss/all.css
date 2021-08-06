@@ -449,6 +449,10 @@ body {
   margin: 0 auto;
 }
 
+.container-fluid {
+  width: 100%;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -786,6 +790,7 @@ body {
   padding: 4px 10px;
   border-radius: 4px;
   display: inline-block;
+  text-align: center;
 }
 
 .btn-file {
@@ -918,6 +923,12 @@ body {
   outline: none;
 }
 
+.selection {
+  border: 1px #CED4DA solid;
+  border-radius: 4px;
+  padding: 16px;
+}
+
 .z-index-1 {
   z-index: 1;
 }
@@ -966,9 +977,36 @@ body {
   z-index: 12;
 }
 
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .modal-card {
   width: 480px;
   padding: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #CED4DA;
+  border-radius: 4px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 4;
+}
+
+.modal-card-scroll {
+  width: 480px;
+  height: 736px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -979,6 +1017,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border: 1px solid #CED4DA;
   border-radius: 4px;
   background-color: #fff;

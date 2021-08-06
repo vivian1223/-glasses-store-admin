@@ -306,7 +306,7 @@
                                 <td class="d-flex pt-2 pb-2">
                                     <a @click.prevent="togglePreview" class="link-primary" href="#"><i
                                             class="fas fa-eye"></i></a>
-                                    <a @click.prevent="toggleWindow" class="link-primary ms-2" href="#"><i class="fas fa-pen"></i></a>
+                                    <a @click.prevent="showEditAdmin" class="link-primary ms-2" href="#"><i class="fas fa-pen"></i></a>
                                 </td>
                             </tr>
                         </template>
@@ -357,33 +357,72 @@
             </div>
             </div>
             <div class="col-4 d-flex justify-content-end mt-3 justify-content-end" v-if="previewEdit">
-                <a href="#" class="btn btn-danger">Deactivate</a>
-                <a href="#" class="ms-1 btn btn-primary">Edit</a>
+                <a href="#" @click.prevent="showEditAdmin" class="btn btn-danger">Deactivate</a>
+                <a href="#" @click.prevent="showEditAdmin"  class="ms-1 btn btn-primary">Edit</a>
              </div>
         </div>
 
     <!-- admin 畫面預覽彈跳視窗結束 -->
     <!-- 編輯畫面彈跳視窗開始 -->
-    <div class="modal-card flex-column" v-if="windowModal">
-        <div class="d-flex align-items-center">
-            <img class="w-14 h-14 object-fit-cover"
-                src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/emir.jpeg"
-                alt="admin picture">
-
-            <div class="col-2 ms-3">
-                <div class="d-flex justify-content-between">
-                    <span class="font-bold">#1</span>
-                    <a @click.prevent="toggleWindow"  href="#" class="link-primary"><i class="fas fa-times"></i></a>
-                </div>
-                <p>Admin</p>
-                <p class="fs-3 font-bold">Emir Wicks</p>
-                <p class="fs-2 font-secondary mt-1 mb-2">emir.wicks@mail.com</p>
-                <div  class="d-flex justify-content-between">
-                    <span>Verified</span>
-                    <a @click.prevent="toggleWindow" href="#" class="link-primary"><i class="fas fa-chevron-down"></i></a>
-                </div>
-            </div>
+    <div class="modal-card-scroll flex-column" v-if="editAdmin">
+        <div class="p-3 container-fluid d-flex justify-content-between bg-light border-bottom-secondary border-top-left-radius-round border-top-right-radius-round">
+            <span class="fs-5 font-bold">Edit Admin</span>
+            <a @click.prevent="hiddenEditAdmin"  href="#" class="link-primary fs-5"><i class="fas fa-times"></i></a>
         </div>
+        <div class="p-3 overflow-y-scroll d-flex flex-column justify-content-start container-fluid">
+            <p class="font-bold fs-4 mb-1">Account</p>
+            <label for="name" class="fs-2 font-secondary">Name</label>
+            <input class="p-1 mb-1" type="text" name="name" id="name" value="Emir Wicks"  disabled>
+            <label for="eamil" class="fs-2 font-secondary">Email</label>
+            <input class="p-1 mb-1" type="eamil" name="eamil" id="eamil" value="emir.wicks@mail.com"  disabled>
+            <hr class="container-fluid mb-1">
+            <p class="font-bold fs-4 mb-1">Verification</p>
+            <div class="d-flex justify-content-between mb-1">
+                <span class="fs-3 font-bold"><i class="fas fa-check-circle font-primary me-1"></i>Verified</span>
+                <span class="fs-2 font-secondary">2020/4/12</span>
+            </div>
+            <a href="#" class="btn btn-secondary font-regular mb-1">Send Verification Mail</a>
+            <hr class="container-fluid mb-1">
+            <p class="font-bold fs-4 mb-1">Access Level</p>
+            <select name="" id="" class="selection mb-1">
+                <option value="">Admin</option>
+            </select>
+            <hr class="container-fluid mb-1">
+            <p class="font-bold fs-4 mb-1">Custom Access</p>
+            <div class="d-flex flex-column">
+                <div class="mb-1">
+                   <input type="checkbox" name="" id="Lecture" value="Lecture"> 
+                   <label for="Lecture ms-1">Lecture</label>
+                </div>
+                <div class="mb-1">
+                    <input type="checkbox" name="" id="Lecture" value="Lecture"> 
+                    <label for="Lecture ms-1">Lecture</label>
+                 </div>
+                 <div class="mb-1">
+                    <input type="checkbox" name="" id="Lecture" value="Lecture"> 
+                    <label for="Lecture ms-1">Lecture</label>
+                 </div>
+                 <div class="mb-1">
+                    <input type="checkbox" name="" id="Lecture" value="Lecture"> 
+                    <label for="Lecture ms-1">Lecture</label>
+                 </div>
+                 <div class="mb-1">
+                    <input type="checkbox" name="" id="Lecture" value="Lecture"> 
+                    <label for="Lecture ms-1">Lecture</label>
+                 </div>
+                 <hr class="container-fluid mb-1">
+                 <p class="font-bold fs-4 mb-1">Deactivate Account</p>
+                 <p class="fs-3 font-danger mb-1"><i class="fas fa-exclamation-triangle me-1"></i>This cannot be undone!</p>
+                 <a href="#" class="btn btn-danger">Deactivate This Account</a>
+                    
+            </div>
+            
+        </div>
+        <div class="container-fluid d-flex justify-content-end mt-3 justify-content-end p-3 border-top-secondary">
+            <a @click.prevent="hiddenEditAdmin"  href="#" class="btn btn-danger">Cancel</a>
+            <a @click.prevent="hiddenEditAdmin" href="#" class="ms-1 btn btn-primary">Update</a>
+         </div>
+    
     </div>
     <!-- 編輯畫面彈跳視窗結束 -->
     </div>

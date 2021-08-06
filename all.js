@@ -9,6 +9,7 @@ const app = Vue.createApp({
             adminModal:false,
             windowModal:false,
             previewEdit:false,
+            editAdmin:false,
             adminInfo:[
                 {
                 id:1,
@@ -112,6 +113,22 @@ const app = Vue.createApp({
         },
         toggleEdit(){
             this.previewEdit = !this.previewEdit;
+        },
+        showEditAdmin(){
+            this.backgroundDarkenLayer = true;
+            const wholePage = document.querySelector('#app') 
+            const pageOverflow = wholePage.style.overflow;
+                pageOverflow === "hidden";
+            this.editAdmin= true;
+            this.previewEdit = false;
+            this.adminModal= false;
+        },
+        hiddenEditAdmin(){
+            this.backgroundDarkenLayer = false;
+            const wholePage = document.querySelector('#app') 
+            const pageOverflow = wholePage.style.overflow;
+                pageOverflow === "visible"
+            this.editAdmin= false;
         }
     
     },
