@@ -8,6 +8,7 @@ const app = Vue.createApp({
             backgroundDarkenLayer:false,
             adminModal:false,
             windowModal:false,
+            previewEdit:false,
             adminInfo:[
                 {
                 id:1,
@@ -108,7 +109,11 @@ const app = Vue.createApp({
                 pageOverflow === "hidden"
             }
             this.windowModal = !this.windowModal;
+        },
+        toggleEdit(){
+            this.previewEdit = !this.previewEdit;
         }
+    
     },
 });
 

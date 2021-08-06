@@ -5,6 +5,7 @@ width: 480px;
 padding: 32px;
 display: flex;
 align-items: center;
+flex-direction: column;
 border: 1px solid $secondary;
 border-radius: 4px;
 background-color: $white;

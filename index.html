@@ -225,6 +225,9 @@
                                     <!-- 講師回覆結束-->
                                     <!-- 修改回覆開始 -->
                                     <div v-if="editor" class="border-top-secondary border-radius-round">
+                                        <div id="editor">
+                                            
+                                        </div>
                                         <div
                                             class=" border-bottom-secondary  d-flex bg-light justify-content-start border-top-right-radius-round border-top-left-radius-round pt-2 pb-2 ps-4">
                                             <a href="#" class="link-primary font-bold  me-3">Body Text <i
@@ -334,8 +337,8 @@
         <!-- admin 畫面預覽彈跳視窗開始 -->
 
         <div class="modal-card" v-if="adminModal">
-
-            <img class="w-14 h-14 object-fit-cover"
+            <div class="d-flex ">
+                <img class="w-14 h-14 object-fit-cover"
                 src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/emir.jpeg"
                 alt="admin picture">
 
@@ -349,9 +352,14 @@
                 <p class="fs-2 font-secondary mt-1 mb-2">emir.wicks@mail.com</p>
                 <div  class="d-flex justify-content-between">
                     <span>Verified</span>
-                    <a @click.prevent="togglePreview" href="#" class="link-primary"><i class="fas fa-chevron-down"></i></a>
+                    <a @click.prevent="toggleEdit" href="#" class="link-primary"><i class="fas fa-chevron-down"></i></a>
                 </div>
             </div>
+            </div>
+            <div class="col-4 d-flex justify-content-end mt-3 justify-content-end" v-if="previewEdit">
+                <a href="#" class="btn btn-danger">Deactivate</a>
+                <a href="#" class="ms-1 btn btn-primary">Edit</a>
+             </div>
         </div>
 
     <!-- admin 畫面預覽彈跳視窗結束 -->
@@ -376,10 +384,6 @@
                 </div>
             </div>
         </div>
-             <div class="col-4 d-flex justify-content-end mt-3 justify-content-end">
-                <a href="#" class="btn btn-danger">Deactivate</a>
-                <a href="#" class="ms-1 btn btn-primary">Edit</a>
-             </div>
     </div>
     <!-- 編輯畫面彈跳視窗結束 -->
     </div>
